@@ -3,6 +3,153 @@ import CarIcon from "../../icons/car-icon.svg?react"
 import BusIcon from "../../icons/bus-icon.svg?react"
 import { LazyDiv } from "../lazyDiv"
 import { LOCATION, LOCATION_ADDRESS } from "../../const"
+import { BRIDE_INFO, GROOM_INFO } from "../../const"
+import { STATIC_ONLY } from "../../env"
+import { Button } from "../button"
+import { useModal } from "../modal"
+
+export const Information1 = () => {
+  return (
+    <>
+      <h2 className="english">Information</h2>
+      <div className="info-card">
+        <div className="label">식사 안내</div>
+        <div className="content">
+          식사시간: 12시 30분 ~ 14시 30분
+          <br />
+          장소: 지하 1층 연회장
+        </div>
+      </div>
+    </>
+  )
+}
+
+export const Information2 = () => {
+  const { openModal, closeModal } = useModal()
+
+  return (
+    <>
+      <div className="info-card">
+        <div className="label">마음 전하기</div>
+        <div className="content">
+          참석이 어려워 직접 축하해주지 못하는
+          <br />
+          분들을 위해 계좌번호를 기재하였습니다.
+          <br />
+          넓은 마음으로 양해 부탁드립니다.
+        </div>
+
+        <div className="break" />
+
+        <Button
+          style={{ width: "100%" }}
+          onClick={() => {
+            openModal({
+              className: "donation-modal",
+              closeOnClickBackground: true,
+              header: <div className="title">신랑측 계좌번호</div>,
+              content: (
+                <>
+                  {GROOM_INFO.filter(({ account }) => !!account).map(
+                    ({ relation, name, account }) => (
+                      <div className="account-info" key={relation}>
+                        <div>
+                          <div className="name">
+                            <span className="relation">{relation}</span> {name}
+                          </div>
+                          <div>{account}</div>
+                        </div>
+                        <Button
+                          className="copy-button"
+                          onClick={async () => {
+                            if (account) {
+                              try {
+                                navigator.clipboard.writeText(account)
+                                alert(account + "\n복사되었습니다.")
+                              } catch {
+                                alert("복사에 실패했습니다.")
+                              }
+                            }
+                          }}
+                        >
+                          복사하기
+                        </Button>
+                      </div>
+                    ),
+                  )}
+                </>
+              ),
+              footer: (
+                <Button
+                  buttonStyle="style2"
+                  className="bg-light-grey-color text-dark-color"
+                  onClick={closeModal}
+                >
+                  닫기
+                </Button>
+              ),
+            })
+          }}
+        >
+          신랑측 계좌번호 보기
+        </Button>
+        <div className="break" />
+        <Button
+          style={{ width: "100%" }}
+          onClick={() => {
+            openModal({
+              className: "donation-modal",
+              closeOnClickBackground: true,
+              header: <div className="title">신부측 계좌번호</div>,
+              content: (
+                <>
+                  {BRIDE_INFO.filter(({ account }) => !!account).map(
+                    ({ relation, name, account }) => (
+                      <div className="account-info" key={relation}>
+                        <div>
+                          <div className="name">
+                            <span className="relation">{relation}</span> {name}
+                          </div>
+                          <div>{account}</div>
+                        </div>
+                        <Button
+                          className="copy-button"
+                          onClick={async () => {
+                            if (account) {
+                              try {
+                                navigator.clipboard.writeText(account)
+                                alert(account + "\n복사되었습니다.")
+                              } catch {
+                                alert("복사에 실패했습니다.")
+                              }
+                            }
+                          }}
+                        >
+                          복사하기
+                        </Button>
+                      </div>
+                    ),
+                  )}
+                </>
+              ),
+              footer: (
+                <Button
+                  buttonStyle="style2"
+                  className="bg-light-grey-color text-dark-color"
+                  onClick={closeModal}
+                >
+                  닫기
+                </Button>
+              ),
+            })
+          }}
+        >
+          신부측 계좌번호 보기
+        </Button>
+      </div>
+    </>
+  )
+}
 
 export const Location = () => {
   return (
@@ -15,63 +162,9 @@ export const Location = () => {
         </div>
         <Map />
       </LazyDiv>
-      <LazyDiv className="card location">
-        <div className="location-info">
-          <div className="transportation-icon-wrapper">
-            <BusIcon className="transportation-icon" />
-          </div>
-          <div className="heading">대중교통</div>
-          <div />
-          <div className="content">
-            * 지하철 이용시
-            <br />
-            지하철 2호선 <b>낙성대역 4번출구</b> 나와서
-            <br />
-            → 첫번째 골목 끼고 좌회전
-            <br />→ 마을버스 <b>관악 02번</b> 승차
-            <br />→ <b>서울대후문·연구공원 정류장</b> 하차
-            <br />
-            → 길 건너 간판 참고해 도보로 100m 이동
-            <br />
-            검은색 피라미드 유리 건물입니다.
-          </div>
-          <div />
-          <div className="content">
-            * 버스 이용 시
-            <br />
-            - 간선(파랑): 461, 641
-            <br />
-            - 지선(초록): 5413, 5524, 5528
-            <br />
-            반드시 <b>낙성대입구</b> 하차
-            <br />→ 마을버스 <b>관악 02번</b> 이용
-            <br />
-            이하 위와 동일합니다.
-          </div>
-        </div>
-        <div className="location-info">
-          <div className="transportation-icon-wrapper">
-            <CarIcon className="transportation-icon" />
-          </div>
-          <div className="heading">자가용</div>
-          <div />
-          <div className="content">
-            네이버 지도, 카카오 네비, 티맵 등 이용
-            <br />
-            <b>서울대학교 연구공원 웨딩홀</b> 검색
-            <br />
-            - 주차 요금은 무료입니다.
-            <br />
-            (주차장 이용 시 웨딩홀과 바로 연결)
-          </div>
-          <div />
-          <div className="content">
-            <b>
-              ※ 서울대학교 정, 후문을 통과할 경우 통행료가 발생하므로
-              유의바랍니다. 낙성대 방향으로 이용해주세요.
-            </b>
-          </div>
-        </div>
+      <LazyDiv className="card information">
+        <Information1 />
+        <Information2 />
       </LazyDiv>
     </>
   )
