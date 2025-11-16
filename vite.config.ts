@@ -26,6 +26,7 @@ try {
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/mobile_invitation/',
   plugins: [
     react(),
     svgr(),
