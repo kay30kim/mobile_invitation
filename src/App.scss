@@ -11,16 +11,19 @@
 @use "./component/shareButton";
 
 :root {
-  --theme-color: #ff8585;
-  --theme-bg-color: #ffe7e7;
-  --alt-color: #c28080;
-  --alt-bg-color: #f4f0f0;
-  --dark-color: #282c34;
-  --dark-grey-color: #d2d2d2;
-  --light-grey-color: #eaeaea;
-  --light-color: #f9f9f9;
+  --theme-color: #97da86;        /* 연두 포인트 */
+  --theme-bg-color: #d9f1d0;     /* 연한 파스텔 연두 배경 */
+
+  --alt-color: #7abb70;          /* 톤 다운된 그린 */
+  --alt-bg-color: #e2fdd8;       /* 미세하게 밝은 초록빛 */
+
+  --dark-color: #1f2a21;         /* 딥그린/블랙 혼합 */
+  --dark-grey-color: #bfcfc1;    /* 초록 여운이 있는 연회색 */
+  --light-grey-color: #c4e1bf;   /* 밝은 연두 회색 */
+  --light-color: #ecfae8;        /* 거의 화이트에 가까운 민트빛 */
+
   --white-color: #ffffff;
-  --red-color: #ff0000;
+  --red-color: #ff0000;   
 
   font-family: "MapoGoldenPier";
   font-size: 20px;

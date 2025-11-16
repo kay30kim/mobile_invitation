@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react"
 import patelUrl from "../../icons/petal.png"
 
-const X_SPEED = 0.6
-const X_SPEED_VARIANCE = 0.8
+const X_SPEED = 0.4
+const X_SPEED_VARIANCE = 0.2
 
-const Y_SPEED = 0.4
-const Y_SPEED_VARIANCE = 0.4
+const Y_SPEED = 0.2
+const Y_SPEED_VARIANCE = 0.1
 
 const FLIP_SPEED_VARIANCE = 0.02
 
@@ -24,7 +24,7 @@ class Petal {
   constructor(
     private canvas: HTMLCanvasElement,
     private ctx: CanvasRenderingContext2D,
-    private petalImg: HTMLImageElement,
+    private petalImg: HTMLCanvasElement | HTMLImageElement,
   ) {
     this.x = Math.random() * canvas.width
     this.y = Math.random() * canvas.height * 2 - canvas.height
@@ -93,20 +93,34 @@ export const BGEffect = () => {
     const petalImg = new Image()
     petalImg.src = patelUrl
 
+    petalImg.onload = () => {
+      // 🌿 STEP 2: 오프스크린 캔버스 생성 + 필터 적용해 초록 PNG 제작
+      const off = document.createElement("canvas")
+      off.width = petalImg.width
+      off.height = petalImg.height
+      const offCtx = off.getContext("2d") as CanvasRenderingContext2D
+
+      // 원하는 색상으로 바꾸는 필터 (연초록 톤)
+      offCtx.filter = "hue-rotate(150deg) saturate(220%) brightness(1.0)"
+      offCtx.drawImage(petalImg, 0, 0)
+
+      // STEP 3: 처리된 이미지를 사용해서 Petal 생성
+      initializePetals(off)
+      render() 
+    }
+
     const getPetalNum = () => {
       return Math.floor((window.innerWidth * window.innerHeight) / 30000)
     }
 
-    const initializePetals = () => {
+    const initializePetals = (processedImg: HTMLCanvasElement) => {
       const count = getPetalNum()
       const petals = []
       for (let i = 0; i < count; i++) {
-        petals.push(new Petal(canvas, ctx, petalImg))
+        petals.push(new Petal(canvas, ctx, processedImg))  // ← ✔ 초록 이미지 전달
       }
       petalsRef.current = petals
     }
-
-    initializePetals()
 
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
