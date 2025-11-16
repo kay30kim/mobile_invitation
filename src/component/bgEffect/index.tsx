@@ -101,7 +101,7 @@ export const BGEffect = () => {
       const offCtx = off.getContext("2d") as CanvasRenderingContext2D
 
       // 원하는 색상으로 바꾸는 필터 (연초록 톤)
-      offCtx.filter = "hue-rotate(150deg) saturate(220%) brightness(1.0)"
+      // offCtx.filter = "hue-rotate(150deg) saturate(220%) brightness(1.0)"
       offCtx.drawImage(petalImg, 0, 0)
 
       // STEP 3: 처리된 이미지를 사용해서 Petal 생성
