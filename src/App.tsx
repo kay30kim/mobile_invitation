@@ -19,24 +19,23 @@ function App() {
         <LazyDiv className="card-group">
           {/* 표지 */}
           <Cover />
-
-          {/* 모시는 글 */}
+        </LazyDiv>
+        <LazyDiv className="card-group">
+        {/* 모시는 글 */}
           <Invitation />
         </LazyDiv>
-
         <LazyDiv className="card-group">
           {/* 결혼식 날짜 (달력) */}
           <Calendar />
-
+        </LazyDiv>
+        <LazyDiv className="card-group">
           {/* 겔러리 */}
           <Gallery />
         </LazyDiv>
-
         <LazyDiv className="card-group">
           {/* 오시는길 */}
           <Location />
         </LazyDiv>
-
         <ShareButton />
       </div>
     </div>

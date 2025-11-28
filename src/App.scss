@@ -9,6 +9,8 @@
 @use "./component/guestbook";
 @use "./component/modal";
 @use "./component/shareButton";
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap");
 
 :root {
   /* 메인 크림 톤 */
@@ -117,6 +119,10 @@ body {
 
   .card-view {
     width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 
     @media (max-width: 980px) {
@@ -129,32 +135,34 @@ body {
 
     .card-group {
       position: relative;
-      @media (width > 980px) {
-        display: flex;
-        flex-direction: row;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        margin: 10px;
-        background-color: var(--light-color);
+      display: block !important;
+      // @media (width > 980px) {
+      //   // display: flex;
+      //   // flex-direction: row;
+      //   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      //   margin: 10px;
+      //   background-color: var(--light-color);
 
-        opacity: 0;
-        &.lazy-active {
-          animation-name: lazy-fade-in;
-          animation-duration: 3s;
-          opacity: 1;
-        }
+      //   opacity: 0;
+      //   &.lazy-active {
+      //     animation-name: lazy-fade-in;
+      //     animation-duration: 3s;
+      //     opacity: 1;
+      //   }
 
-        @media print {
-          opacity: 1;
-          animation-name: inherit !important;
-          animation-duration: inherit !important;
-        }
-      }
+      //   @media print {
+      //     opacity: 1;
+      //     animation-name: inherit !important;
+      //     animation-duration: inherit !important;
+      //   }
+      // }
 
       .card {
         background-color: var(--light-color);
         padding: 1rem;
         border: 1px solid var(--light-grey-color);
-        width: 50%;
+        width: 100%;
+        aspect-ratio: 9/16;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -216,4 +224,8 @@ h2 {
 
 div.break {
   height: 1rem;
+}
+
+.cover-fullscreen * {
+  color: white !important;
 }
