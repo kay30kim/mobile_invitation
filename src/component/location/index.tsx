@@ -13,11 +13,13 @@ export const Information1 = () => {
     <>
       <h2 className="english">Information</h2>
       <div className="info-card">
-        <div className="label">예식 안내</div>
+        <div className="label">교통 안내</div>
         <div className="content">
-          1부 본식 & 사진촬영 : 오후 2시 - 오후 3시
+          지하철1 : 7호선 학동역에서 도보 5분(언덕주의..!) 
           <br />
-          2부 식사 & 피로연 : 오후 3시 - 오후 5시
+          지하철2 : 9호선 언주역에서 도보 7분 (언덕주의..!)
+          <br />
+          주차장 : 건물내 300대 주차 가능
         </div>
       </div>
     </>
@@ -32,11 +34,11 @@ export const Information2 = () => {
       <div className="info-card">
         <div className="label">마음 전하기</div>
         <div className="content">
-          따로 계좌번호를 여쭤보시는 수고를
+          {/* 따로 계좌번호를 여쭤보시는 수고를
           <br />
           덜기 위해 계좌번호를 기재하였습니다.
           <br />
-          부담 안가지셨으면 좋겠습니다.
+          부담 안가지셨으면 좋겠습니다. */}
         </div>
 
         <div className="break" />
