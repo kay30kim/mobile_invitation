@@ -15,11 +15,11 @@ export const Information1 = () => {
       <div className="info-card">
         <div className="label">교통 안내</div>
         <div className="content">
-          지하철1 : 7호선 학동역에서 도보 5분(언덕주의..!) 
+          지하철1 : 7호선 학동역에서 도보 5분
           <br />
-          지하철2 : 9호선 언주역에서 도보 7분 (언덕주의..!)
+          지하철2 : 9호선 언주역에서 도보 7분
           <br />
-          주차장 : 건물내 300대 주차 가능
+          주차장 : 건물내 300대, 외부 주차 300대
         </div>
       </div>
     </>
