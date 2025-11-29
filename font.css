@@ -12,3 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: "UhBee Se_hyun";
+    src: url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.eot");
+    src: url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.svg#UhBee Se_hyun")format("svg");
+}
+
