@@ -13,6 +13,7 @@
 :root {
   /* 메인 크림 톤 */
   --theme-bg-color: #FCFAF6;      /* 전체 배경 아이보리 */
+  --theme-bg-color2: #eba2d4;      
   --light-color: #F8F4EC;         /* 카드 배경 */
 
   /* 포인트 컬러 (브라운/베이지 라인) */
@@ -44,6 +45,7 @@
 $colors: (
   theme-color: var(--theme-color),
   theme-bg-color: var(--theme-bg-color),
+  theme-bg-color2: var(--theme-bg-color),
   alt-color: var(--alt-color),
   alt-bg-color: var(--alt-bg-color),
   dark-color: var(--dark-color),

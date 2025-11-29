@@ -1,4 +1,5 @@
 import { Cover } from "./component/cover"
+import { MainCover } from "./component/mainCover"
 import { Location } from "./component/location"
 import "./App.scss"
 import { BGEffect } from "./component/bgEffect"
@@ -16,6 +17,8 @@ function App() {
     <div className="background">
       <BGEffect />
       <div className="card-view">
+        <MainCover />
+        {/* <Cover /> */}
         <LazyDiv className="card-group">
           {/* 표지 */}
           <Cover />
