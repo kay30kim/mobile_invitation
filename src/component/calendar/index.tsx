@@ -116,16 +116,17 @@ export const Calendar = () => {
           <div className="count">{diffs.seconds}</div>
         </div>
         <div className="message">
-          {GROOM_FIRSTNAME} & {BRIDE_FIRSTNAME}의 결혼식이{" "}
+          Kyungho & Chaehee's wedding is {" "}
           {dayDiff > 0 ? (
             <>
-              <span className="d-day">{dayDiff}</span>일 남았습니다.
+            <>in </>
+              <span className="d-day">{dayDiff}</span> days.
             </>
           ) : dayDiff === 0 ? (
-            <>오늘입니다.</>
+            <>today.</>
           ) : (
             <>
-              <span className="d-day">{-dayDiff}</span>일 지났습니다.
+              <span className="d-day">{-dayDiff}</span> days left.
             </>
           )}
         </div>

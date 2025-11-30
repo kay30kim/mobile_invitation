@@ -17,7 +17,7 @@ function App() {
     <div className="background">
       <BGEffect />
       <div className="card-view">
-        <MainCover />
+        {/* <MainCover /> */}
         {/* <Cover /> */}
         <LazyDiv className="card-group">
           {/* 표지 */}
