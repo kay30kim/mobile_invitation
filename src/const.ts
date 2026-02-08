@@ -63,6 +63,20 @@ export const BRIDE_INFO = [
   },
 ]
 
+export const TRANSLATIONS = {
+  ko: {
+    invitation: "축하의 마음으로 참석해주시는 모든 분들을 귀하게 모실 수 있도록",
+    attendanceTitle: "참석 의사 전달",
+    contactTitle: "축하 인사 전하기",
+    contactSubtitle: "전화, 문자메세지로 축하 인사를 전해보세요.",
+  },
+  en: {
+    invitation: "We would like to welcome all those who celebrate with us",
+    attendanceTitle: "Attendance",
+    contactTitle: "Send Congratulations",
+    contactSubtitle: "Share your congratulations via phone or message.",
+  },
+}
 export const GROOM_FULLNAME = "김경호"
 export const GROOM_FIRSTNAME = "경호"
 export const GROOM_TITLE = "차남"

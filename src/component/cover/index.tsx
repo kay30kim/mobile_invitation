@@ -7,6 +7,7 @@ import {
 } from "../../const"
 import { COVER_IMAGE } from "../../images"
 import { LazyDiv } from "../lazyDiv"
+import { useLanguage } from "../../context/LanguageContext"
 
 const DAY_OF_WEEK = [
   "Sunday",
@@ -19,8 +20,27 @@ const DAY_OF_WEEK = [
 ]
 
 export const Cover = () => {
+  const { language, setLanguage } = useLanguage()
   return (
     <LazyDiv className="card cover">
+      <div className="language-toggle" style={{ position: "absolute", top: "1rem", right: "1rem" }}>
+        <button
+          type="button"
+          aria-pressed={language === "ko"}
+          onClick={() => setLanguage("ko")}
+          style={{ fontWeight: language === "ko" ? "bold" : "normal", marginRight: "0.5rem" }}
+        >
+          KO
+        </button>
+        <button
+          type="button"
+          aria-pressed={language === "en"}
+          onClick={() => setLanguage("en")}
+          style={{ fontWeight: language === "en" ? "bold" : "normal" }}
+        >
+          EN
+        </button>
+      </div>
       <div className="wedding-date">
         {WEDDING_DATE.format("YYYY")}
         <div className="divider" />

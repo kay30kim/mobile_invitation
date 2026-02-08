@@ -22,3 +22,14 @@
     url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.svg#UhBee Se_hyun")format("svg");
 }
 
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+}

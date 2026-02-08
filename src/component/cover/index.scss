@@ -55,4 +55,12 @@
     margin-bottom: 0.3rem;
     opacity: 0.7;
   }
+  .language-toggle {
+    z-index: 9999;
+    pointer-events: auto;
+    button {
+      cursor: pointer;
+      pointer-events: auto;
+    }
+  }
 }

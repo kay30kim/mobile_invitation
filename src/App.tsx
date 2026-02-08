@@ -11,38 +11,41 @@ import { GuestBook } from "./component/guestbook"
 import { LazyDiv } from "./component/lazyDiv"
 import { ShareButton } from "./component/shareButton"
 import { STATIC_ONLY } from "./env"
+import { LanguageProvider } from "./context/LanguageContext"
 
 function App() {
   return (
-    <div className="background">
-      <BGEffect />
-      <div className="card-view">
-        {/* <MainCover /> */}
-        {/* <Cover /> */}
-        <LazyDiv className="card-group">
-          {/* 표지 */}
-          <Cover />
+    <LanguageProvider>
+      <div className="background">
+        <BGEffect />
+        <div className="card-view">
+          {/* <MainCover /> */}
+          {/* <Cover /> */}
+          <LazyDiv className="card-group">
+            {/* 표지 */}
+            <Cover />
 
-          {/* 모시는 글 */}
-          <Invitation />
-        </LazyDiv>
+            {/* 모시는 글 */}
+            <Invitation />
+          </LazyDiv>
 
-        <LazyDiv className="card-group">
-          {/* 결혼식 날짜 (달력) */}
-          <Calendar />
+          <LazyDiv className="card-group">
+            {/* 결혼식 날짜 (달력) */}
+            <Calendar />
 
-          {/* 겔러리 */}
-          <Gallery />
-        </LazyDiv>
+            {/* 겔러리 */}
+            <Gallery />
+          </LazyDiv>
 
-        <LazyDiv className="card-group">
-          {/* 오시는길 */}
-          <Location />
-        </LazyDiv>
+          <LazyDiv className="card-group">
+            {/* 오시는길 */}
+            <Location />
+          </LazyDiv>
 
-        <ShareButton />
+          <ShareButton />
+        </div>
       </div>
-    </div>
+    </LanguageProvider>
   )
 }
 

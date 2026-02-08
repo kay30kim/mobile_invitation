@@ -16,28 +16,30 @@ import { Button } from "../button"
 import { LazyDiv } from "../lazyDiv"
 import PhoneIcon from "../../icons/phone-flip-icon.svg?react"
 import EnvelopeIcon from "../../icons/envelope-icon.svg?react"
+import { useLanguage } from "../../context/LanguageContext"
+import { TRANSLATIONS } from "../../const"
 
 export const Invitation = () => {
   const { openModal, closeModal } = useModal()
+  const { language } = useLanguage()
+
   return (
     <LazyDiv className="card invitation">
       <h2 className="english">Invitation</h2>
 
       <div className="break" />
 
-      <div className="content">2018년 봄,</div>
-      <div className="content">20대의 청춘속에서 만난 두 사람이</div>
-      <div className="content">오랜 시간 서로의 곁을 지켜오며</div>
+      <div className="content">{language === "ko" ? "2018년 봄," : "In spring 2018,"}</div>
+      <div className="content">{language === "ko" ? "20대의 청춘 속에서 만난 두 사람이" : "Two people met in their youth"}</div>
+      <div className="content">{language === "ko" ? "오랜 시간 서로의 곁을 지켜오며" : "and have supported each other"}</div>
       <div className="break" />
-      <div className="content">2026년, 그 시절의 마음으로</div>
-      <div className="content">부부의 길을</div>
-      <div className="content">함께 걷고자 합니다.</div>
+      <div className="content">{language === "ko" ? "2026년, 그 시절의 마음으로" : "In 2026, with the heart of that time"}</div>
+      <div className="content">{language === "ko" ? "부부의 길을" : "We will walk the path of marriage"}</div>
+      <div className="content">{language === "ko" ? "함께 걷고자 합니다." : "together."}</div>
       <div className="break" />
-      <div className="content">저희의 새로운 시작에</div>
-      <div className="content">함께해 주시면 감사하겠습니다.</div>
-
+      <div className="content">{language === "ko" ? "저희의 새로운 시작에" : "We would be grateful if you would"}</div>
+      <div className="content">{language === "ko" ? "함께해 주시면 감사하겠습니다." : "join us at our new beginning."}</div>
       <div className="break" />
-
       <div className="name">
         {GROOM_FATHER} · {GROOM_MOTHER}
         <span className="relation">
@@ -62,10 +64,8 @@ export const Invitation = () => {
             closeOnClickBackground: true,
             header: (
               <div className="title-group">
-                <div className="title">축하 인사 전하기</div>
-                <div className="subtitle">
-                  전화, 문자메세지로 축하 인사를 전해보세요.
-                </div>
+                <div className="title">{TRANSLATIONS[language].contactTitle}</div>
+                <div className="subtitle">{TRANSLATIONS[language].contactSubtitle}</div>
               </div>
             ),
             content: (
@@ -126,7 +126,7 @@ export const Invitation = () => {
                 className="bg-light-grey-color text-dark-color"
                 onClick={closeModal}
               >
-                닫기
+                {language === "ko" ? "닫기" : "Close"}
               </Button>
             ),
           })

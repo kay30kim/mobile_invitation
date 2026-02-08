@@ -8,20 +8,58 @@ import { STATIC_ONLY } from "../../env"
 import { Button } from "../button"
 import { useModal } from "../modal"
 
+// ...existing code...
 export const Information1 = () => {
   return (
     <>
       <h2 className="english">Information</h2>
       <div className="info-card">
         <div className="label">교통 안내</div>
+
         <div className="content">
-          지하철1 : 7호선 학동역에서 도보 5분
-          <br />
-          지하철2 : 9호선 언주역에서 도보 7분
-          <br />
-          주차장 : 건물내 300대, 외부 주차 300대
+          <div className="transportation-list">
+            <div className="transportation-item">
+              <div className="transportation-title">지하철 이용시</div>
+
+              <div className="transportation-rows">
+                <div className="transport-row">
+                  {/* <span className="line line-7">⑦</span> */}
+                  <div className="route-inline">
+                    <span className="line-label line-7">7호선</span>
+                    <span className="station">학동역 <span className="exit">(4번출구)</span></span>
+                    <span className="distance">도보 5분</span>
+                  </div>
+                </div>
+
+                <div className="transport-row">
+                  {/* <span className="line line-9">⑨</span> */}
+                  <div className="route-inline">
+                    <span className="line-label line-9">9호선</span>
+                    <span className="station">언주역 <span className="exit">(2번출구)</span></span>
+                    <span className="distance">도보 7분</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="transportation-item bus">
+                <div className="transportation-title2">버스 이용시</div>
+                <div className="bus-row">
+                  <div className="bus-lines">
+                    <a className="bus-link" href="#">147, 241, 463, 3412, 4211</a><br />
+                    <span className="station"> 논현동고개(23-119) 하차 <span className="exit">(학동역 방면)</span></span>
+                    <span className="distance-bus">도보 2분</span>
+                  </div>
+                  <div className="bus-lines">
+                    <a className="bus-link" href="#">147, 463, 4211</a><br />
+                    <span className="station"> 논현고개(23-146) 하차 <span className="exit">(맞은편)</span></span>
+                    <span className="distance-bus">도보 2분</span>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
+    </div>
     </>
   )
 }

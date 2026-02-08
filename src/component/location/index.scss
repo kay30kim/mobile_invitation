@@ -316,3 +316,142 @@
     }
   }
 }
+
+.transportation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.transportation-item {
+  .transportation-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+  }
+  .transportation-title2 {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.4rem;
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+.transportation-rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.transport-row {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+/* 한 줄로 표시되는 부분 */
+.route-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+}
+
+.line {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex: 0 0 1.6rem;
+}
+
+/* 라인 텍스트를 배지 색상과 동일하게 하는 pill 스타일 */
+.line-label {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.line-7 {
+  background-color: #2b4220; /* 7호선 계열 녹색 */
+}
+.line-9 {
+  background-color: #c59507; /* 9호선 황금톤 (필요하면 연두 계열로 변경) */
+}
+
+.transport-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: var(--dark-color);
+}
+
+.station {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.exit {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin-left: 0.35rem;
+  font-weight: 400;
+}
+
+.distance {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin-top: 0.15rem;
+}
+
+.distance-bus {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin-top: 0.15rem;
+  margin-left: 0.3rem;
+}
+
+.bus .bus-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bus-link {
+  color: #093f10; /* 버스 목록 색상: 연두-초록 계열 (사진 느낌) */
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 0.35rem;
+  text-align: center;
+}
+.bus-link:hover {
+  text-decoration: underline;
+}
+
+.bus-desc {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--dark-color);
+  white-space: pre-line;
+  text-align: center;
+}
+
+/* 반응형: 너무 좁으면 줄바꿈 허용 (가독성 보정) */
+@media (max-width: 480px) {
+  .route-inline { gap: 0.4rem; flex-wrap: wrap; justify-content: center; }
+  .distance { margin-left: 0; }
+  .line, .line-label { width: auto; height: auto; padding: 0.12rem 0.45rem; }
+}
