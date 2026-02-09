@@ -5,7 +5,7 @@ import {
   WEDDING_DATE,
   WEDDING_DATE_FORMAT,
 } from "../../const"
-import { MAIN_COVER_IMAGE } from "../../images"
+import { MAIN_COVER_IMAGE20 } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 import "./index.scss"
 import { useLanguage } from "../../context/LanguageContext"
@@ -27,7 +27,7 @@ export const MainCover = () => {
   return (
     <LazyDiv className="card cover">
       <div className="image-wrapper">
-        <img src={MAIN_COVER_IMAGE} alt="sample" />
+        <img src={MAIN_COVER_IMAGE20} alt="sample" />
       </div>
       <div className="cover-text">
 

@@ -91,6 +91,8 @@ export const TRANSLATIONS = {
     station4: "논현고개(23-146) 하차",
     distance1: "도보 5분",
     distance2: "도보 7분",
+    distance3: "도보 2분",
+    distance4: "도보 2분",
     information: "Information",
 
     mealGuide: "식사 안내",
