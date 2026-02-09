@@ -1,20 +1,27 @@
-import { BRIDE_INFO, GROOM_INFO } from "../../const"
+import { BRIDE_INFO, GROOM_INFO, TRANSLATIONS } from "../../const"
 import { STATIC_ONLY } from "../../env"
 import { Button } from "../button"
 import { LazyDiv } from "../lazyDiv"
 import { useModal } from "../modal"
 import { AttendanceInfo } from "./attendance"
+import { useLanguage } from "../../context/LanguageContext"
 
 export const Information1 = () => {
+
+  const { language } = useLanguage()
+  const t = TRANSLATIONS[language]
+
   return (
     <>
-      <h2 className="english">Information</h2>
+      <h2 className="english">{t.information}</h2>
+
       <div className="info-card">
-        <div className="label">식사 안내</div>
+        <div className="label">{t.mealGuide}</div>
+
         <div className="content">
-          식사시간: 12시 30분 ~ 14시 30분
+          {t.mealTime}
           <br />
-          장소: 지하 1층 연회장
+          {t.mealLocation}
         </div>
       </div>
     </>
@@ -22,18 +29,23 @@ export const Information1 = () => {
 }
 
 export const Information2 = () => {
+
   const { openModal, closeModal } = useModal()
+  const { language } = useLanguage()
+  const t = TRANSLATIONS[language]
 
   return (
     <>
       <div className="info-card">
-        <div className="label">마음 전하기</div>
+
+        <div className="label">{t.donation}</div>
+
         <div className="content">
-          참석이 어려워 직접 축하해주지 못하는
+          {t.donationLine1}
           <br />
-          분들을 위해 계좌번호를 기재하였습니다.
+          {t.donationLine2}
           <br />
-          넓은 마음으로 양해 부탁드립니다.
+          {t.donationLine3}
         </div>
 
         <div className="break" />
@@ -44,7 +56,7 @@ export const Information2 = () => {
             openModal({
               className: "donation-modal",
               closeOnClickBackground: true,
-              header: <div className="title">신랑측 계좌번호</div>,
+              header: <div className="title">{t.groomAccountTitle}</div>,
               content: (
                 <>
                   {GROOM_INFO.filter(({ account }) => !!account).map(
@@ -56,21 +68,23 @@ export const Information2 = () => {
                           </div>
                           <div>{account}</div>
                         </div>
+
                         <Button
                           className="copy-button"
                           onClick={async () => {
                             if (account) {
                               try {
                                 navigator.clipboard.writeText(account)
-                                alert(account + "\n복사되었습니다.")
+                                alert(account + "\n" + t.copied)
                               } catch {
-                                alert("복사에 실패했습니다.")
+                                alert(t.copyFail)
                               }
                             }
                           }}
                         >
-                          복사하기
+                          {t.copy}
                         </Button>
+
                       </div>
                     ),
                   )}
@@ -82,22 +96,24 @@ export const Information2 = () => {
                   className="bg-light-grey-color text-dark-color"
                   onClick={closeModal}
                 >
-                  닫기
+                  {t.close}
                 </Button>
               ),
             })
           }}
         >
-          신랑측 계좌번호 보기
+          {t.groomAccountButton}
         </Button>
+
         <div className="break" />
+
         <Button
           style={{ width: "100%" }}
           onClick={() => {
             openModal({
               className: "donation-modal",
               closeOnClickBackground: true,
-              header: <div className="title">신부측 계좌번호</div>,
+              header: <div className="title">{t.brideAccountTitle}</div>,
               content: (
                 <>
                   {BRIDE_INFO.filter(({ account }) => !!account).map(
@@ -109,21 +125,23 @@ export const Information2 = () => {
                           </div>
                           <div>{account}</div>
                         </div>
+
                         <Button
                           className="copy-button"
                           onClick={async () => {
                             if (account) {
                               try {
                                 navigator.clipboard.writeText(account)
-                                alert(account + "\n복사되었습니다.")
+                                alert(account + "\n" + t.copied)
                               } catch {
-                                alert("복사에 실패했습니다.")
+                                alert(t.copyFail)
                               }
                             }
                           }}
                         >
-                          복사하기
+                          {t.copy}
                         </Button>
+
                       </div>
                     ),
                   )}
@@ -135,14 +153,15 @@ export const Information2 = () => {
                   className="bg-light-grey-color text-dark-color"
                   onClick={closeModal}
                 >
-                  닫기
+                  {t.close}
                 </Button>
               ),
             })
           }}
         >
-          신부측 계좌번호 보기
+          {t.brideAccountButton}
         </Button>
+
       </div>
     </>
   )
@@ -155,6 +174,7 @@ export const Information = () => {
         <LazyDiv className="card information">
           <Information1 />
         </LazyDiv>
+
         <LazyDiv className="card information">
           <Information2 />
         </LazyDiv>

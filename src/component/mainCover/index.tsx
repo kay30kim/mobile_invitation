@@ -8,6 +8,8 @@ import {
 import { MAIN_COVER_IMAGE } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 import "./index.scss"
+import { useLanguage } from "../../context/LanguageContext"
+import { TRANSLATIONS } from "../../const"
 
 const DAY_OF_WEEK = [
   "Sunday",
@@ -20,6 +22,8 @@ const DAY_OF_WEEK = [
 ]
 
 export const MainCover = () => {
+  const { language } = useLanguage()
+  const t = TRANSLATIONS[language]
   return (
     <LazyDiv className="card cover">
       <div className="image-wrapper">
@@ -41,8 +45,8 @@ export const MainCover = () => {
 
         {/* 하단 */}
         <div className="bottom-section">
-          <span className="line">2025년 5월 30일 2시</span>
-          <span className="line">서울 강남 엘리에나 호텔 2층 컨벤션홀</span>
+          <span className="line">{t.dateText}</span>
+          <span className="line">{t.locationText}</span>
         </div>
       </div>
     </LazyDiv>

@@ -2,6 +2,8 @@ import dayjs from "dayjs"
 import utc from "dayjs/plugin/utc"
 import timezone from "dayjs/plugin/timezone"
 import "dayjs/locale/ko"
+import { link } from "fs"
+import { stat } from "fs"
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -69,12 +71,91 @@ export const TRANSLATIONS = {
     attendanceTitle: "참석 의사 전달",
     contactTitle: "축하 인사 전하기",
     contactSubtitle: "전화, 문자메세지로 축하 인사를 전해보세요.",
+    dateText: "2026년 5월 30일 2시",
+    locationText: "서울 강남 엘리에나 호텔 2층 컨벤션홀",
+    infoTitle: "교통 안내",
+    subway: "지하철 이용시",
+    bus: "버스 이용시",
+    line7:"7호선",
+    line9:"9호선",
+
+    donation: "마음 전하기",
+    groomAccount: "신랑측 계좌번호 보기",
+    brideAccount: "신부측 계좌번호 보기",
+    copy: "복사하기",
+    close: "닫기",
+
+    station1: "학동역",
+    station2: "언주역",
+    station3: "논현동고개(23-119) 하차",
+    station4: "논현고개(23-146) 하차",
+    distance1: "도보 5분",
+    distance2: "도보 7분",
+    information: "Information",
+
+    mealGuide: "식사 안내",
+    mealTime: "식사시간: 12시 30분 ~ 14시 30분",
+    mealLocation: "장소: 지하 1층 연회장",
+
+    donationLine1: "참석이 어려워 직접 축하해주지 못하는",
+    donationLine2: "분들을 위해 계좌번호를 기재하였습니다.",
+    donationLine3: "넓은 마음으로 양해 부탁드립니다.",
+
+    groomAccountTitle: "신랑측 계좌번호",
+    brideAccountTitle: "신부측 계좌번호",
+
+    groomAccountButton: "신랑측 계좌번호 보기",
+    brideAccountButton: "신부측 계좌번호 보기",
+
+    copied: "복사되었습니다.",
+    copyFail: "복사에 실패했습니다.",
   },
   en: {
     invitation: "We would like to welcome all those who celebrate with us",
     attendanceTitle: "Attendance",
     contactTitle: "Send Congratulations",
     contactSubtitle: "Share your congratulations via phone or message.",
+    dateText: "May 30, 2026 2 PM",
+    locationText: "Eliena Hotel, Gangnam, Seoul (2F Convention Hall)",
+    infoTitle: "Transportation",
+    subway: "Subway",
+    bus: "Bus",
+    line7:"Line 7",
+    line9:"Line 9",
+
+    donation: "Gift Information",
+    groomAccount: "View Groom Account",
+    brideAccount: "View Bride Account",
+    copy: "Copy",
+    close: "Close",
+
+    station1: "Hakdong Station",
+    station2: "Eonju Station",
+    station3: "Get off at Nonhyeon-donggogae (23-119)",
+    station4: "Get off at Nonhyeongogae (23-146)",
+    distance1: "5 min walk",
+    distance2: "7 min walk",
+    distance3: "2 min walk",
+    distance4: "2 min walk",
+
+    information: "Information",
+
+    mealGuide: "Meal Information",
+    mealTime: "Meal Time: 12:30 PM ~ 2:30 PM",
+    mealLocation: "Location: B1 Banquet Hall",
+
+    donationLine1: "For guests who are unable to attend in person,",
+    donationLine2: "we have provided account details below.",
+    donationLine3: "Thank you for your kind understanding.",
+
+    groomAccountTitle: "Groom's Side Account",
+    brideAccountTitle: "Bride's Side Account",
+
+    groomAccountButton: "View Groom Account",
+    brideAccountButton: "View Bride Account",
+
+    copied: "Copied.",
+    copyFail: "Copy failed.",
   },
 }
 export const GROOM_FULLNAME = "김경호"

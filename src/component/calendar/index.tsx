@@ -115,7 +115,7 @@ export const Calendar = () => {
           <span>:</span>
           <div className="count">{diffs.seconds}</div>
         </div>
-        <div className="message">
+        {/* <div className="message">
           Kyungho & Chaehee's wedding is {" "}
           {dayDiff > 0 ? (
             <>
@@ -129,7 +129,7 @@ export const Calendar = () => {
               <span className="d-day">{-dayDiff}</span> days left.
             </>
           )}
-        </div>
+        </div> */}
       </div>
     </LazyDiv>
   )
