@@ -79,9 +79,9 @@ export const TRANSLATIONS = {
     line7:"7호선",
     line9:"9호선",
 
-    donation: "마음 전하기",
-    groomAccount: "신랑측 계좌번호 보기",
-    brideAccount: "신부측 계좌번호 보기",
+    donation: "마음 전하실 곳",
+    groomAccount: "신랑측",
+    brideAccount: "신부측",
     copy: "복사하기",
     close: "닫기",
 
@@ -104,8 +104,8 @@ export const TRANSLATIONS = {
     groomAccountTitle: "신랑측 계좌번호",
     brideAccountTitle: "신부측 계좌번호",
 
-    groomAccountButton: "신랑측 계좌번호 보기",
-    brideAccountButton: "신부측 계좌번호 보기",
+    groomAccountButton: "신랑측",
+    brideAccountButton: "신부측",
 
     copied: "복사되었습니다.",
     copyFail: "복사에 실패했습니다.",

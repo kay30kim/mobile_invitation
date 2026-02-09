@@ -74,13 +74,13 @@ export const Information2 = () => {
   return (
     <>
       <div className="info-card">
-        <div className="label">마음 전하기</div>
+        <div className="label">마음 전하실 곳</div>
         <div className="content">
-          따로 계좌번호를 여쭤보시는 수고를
+          전해주시는 진심은 소중하게 간직하여
           <br />
-          덜기 위해 계좌번호를 기재하였습니다.
+          좋은 부부의 모습으로 보답하겠습니다.
           <br />
-          부담 안가지셨으면 좋겠습니다.
+          마음 깊이 감사드립니다. 
         </div>
 
         <div className="break" />
@@ -135,7 +135,7 @@ export const Information2 = () => {
             })
           }}
         >
-          신랑측 계좌번호 보기
+          신랑측
         </Button>
         <div className="break" />
         <Button
@@ -188,7 +188,7 @@ export const Information2 = () => {
             })
           }}
         >
-          신부측 계좌번호 보기
+          신부측
         </Button>
       </div>
     </>
