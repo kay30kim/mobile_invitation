@@ -32,14 +32,14 @@ export const Cover = () => {
         >
           KO
         </button>
-        <button
+        {/* <button
           type="button"
           aria-pressed={language === "en"}
           onClick={() => setLanguage("en")}
           style={{ fontWeight: language === "en" ? "bold" : "normal" }}
         >
           EN
-        </button>
+        </button> */}
       </div>
       <div className="wedding-date">
         {WEDDING_DATE.format("YYYY")}
