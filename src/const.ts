@@ -84,6 +84,7 @@ export const TRANSLATIONS = {
     brideAccount: "신부측",
     copy: "복사하기",
     close: "닫기",
+    car: "자가용 이용시",
 
     station1: "학동역",
     station2: "언주역",
@@ -124,6 +125,7 @@ export const TRANSLATIONS = {
     bus: "Bus",
     line7:"Line 7",
     line9:"Line 9",
+    car: "Car",
 
     donation: "Gift Information",
     groomAccount: "View Groom Account",

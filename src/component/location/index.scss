@@ -324,16 +324,17 @@
 }
 
 .transportation-item {
+  text-align: center;
   .transportation-title {
     font-weight: 700;
     color: var(--dark-color);
-    margin-bottom: 0.4rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.97rem;
   }
   .transportation-title2 {
     font-weight: 700;
     color: var(--dark-color);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
     margin-top: 0.8rem;
     font-size: 0.95rem;
   }
@@ -399,10 +400,6 @@
   color: var(--dark-color);
 }
 
-.station {
-  font-weight: 600;
-  color: var(--dark-color);
-}
 
 .exit {
   font-size: 0.85rem;
@@ -432,7 +429,7 @@
 
 .bus-link {
   color: #093f10; /* 버스 목록 색상: 연두-초록 계열 (사진 느낌) */
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   margin-right: 0.35rem;
   text-align: center;
@@ -454,4 +451,10 @@
   .route-inline { gap: 0.4rem; flex-wrap: wrap; justify-content: center; }
   .distance { margin-left: 0; }
   .line, .line-label { width: auto; height: auto; padding: 0.12rem 0.45rem; }
+}
+
+.highlight-text {
+  font-weight: 550;           /* 굵게 */
+  color: #605252;             /* 초록색 강조 */
+  display: inline-block; 
 }

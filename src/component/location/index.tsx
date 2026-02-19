@@ -60,6 +60,9 @@ export const Information1 = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="transportation-title2">{t.car}</div>
+                       <span className="station">2시간 주차 무료 (600대)</span>
           </div>
         </div>
       </div>
