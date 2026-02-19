@@ -88,8 +88,8 @@ export const TRANSLATIONS = {
 
     station1: "학동역",
     station2: "언주역",
-    station3: "논현동고개(23-119) 하차",
-    station4: "논현고개(23-146) 하차",
+    station3: "논현동고개 하차",
+    station4: "논현고개 하차",
     distance1: "도보 5분",
     distance2: "도보 7분",
     distance3: "도보 2분",
