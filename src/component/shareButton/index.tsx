@@ -26,9 +26,10 @@ export const ShareButton = () => {
       })
       return
     }
+    console.log("Kakao Share 시작", { shareUrl, GROOM_FULLNAME, BRIDE_FULLNAME })
 
     try {
-      kakao.Share.sendDefault({
+      const shareData = {
         objectType: "feed",
         content: {
           title: `${GROOM_FULLNAME} ❤️ ${BRIDE_FULLNAME}의 결혼식에 초대합니다.`,
@@ -48,8 +49,12 @@ export const ShareButton = () => {
             },
           },
         ],
-        installTalk: true,  // ← 카카오톡 미설치 시 설치 경로 이동
-      })
+        installTalk: true,
+      }
+
+      console.log("Share data:", shareData)
+      kakao.Share.sendDefault(shareData)
+      console.log("Kakao Share 성공")
     } catch (error) {
       navigator.clipboard.writeText(shareUrl).then(() => {
         alert("초대 링크가 클립보드에 복사되었습니다.\n카카오톡 앱을 열어 붙여넣기 해주세요.")

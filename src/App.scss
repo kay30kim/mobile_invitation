@@ -10,6 +10,8 @@
 @use "./component/modal";
 @use "./component/shareButton";
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 :root {
   /* 메인 크림 톤 */
   --theme-bg-color: #FCFAF6;      /* 전체 배경 아이보리 */
