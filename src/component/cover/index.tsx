@@ -56,9 +56,7 @@ export const Cover = () => {
       </div>
       <div className="subtitle">Save the date for the wedding of</div>
       <div className="names">
-        {GROOM_FULLNAME}
-        ❤︎
-        {BRIDE_FULLNAME}
+        {GROOM_FULLNAME} ❤︎ {BRIDE_FULLNAME}
       </div>
       <div className="info">{WEDDING_DATE.format(WEDDING_DATE_FORMAT)}</div>
       <div className="info">{LOCATION}</div>

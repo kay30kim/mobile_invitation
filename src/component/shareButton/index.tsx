@@ -32,7 +32,7 @@ export const ShareButton = () => {
       const shareData = {
         objectType: "feed",
         content: {
-          title: `${GROOM_FULLNAME} ❤️ ${BRIDE_FULLNAME}의 결혼식에 초대합니다.`,
+          title: `${GROOM_FULLNAME} ❤︎ ${BRIDE_FULLNAME}의 결혼식에 초대합니다.`,
           description: WEDDING_DATE.format(WEDDING_DATE_FORMAT) + "\n" + LOCATION,
           imageUrl: new URL(`${baseUrl}preview_image.jpg?v=1`, window.location.origin).href,
           link: {
