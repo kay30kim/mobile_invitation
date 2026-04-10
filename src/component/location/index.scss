@@ -137,6 +137,7 @@
     border-radius: 0.5rem;
     .label {
       position: absolute;
+      white-space: nowrap;
       left: 50%;
       top: -1rem;
       transform: translateX(-50%);

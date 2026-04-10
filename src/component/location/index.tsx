@@ -2,7 +2,7 @@ import { Map } from "./map"
 import CarIcon from "../../icons/car-icon.svg?react"
 import BusIcon from "../../icons/bus-icon.svg?react"
 import { LazyDiv } from "../lazyDiv"
-import { LOCATION, LOCATION_ADDRESS } from "../../const"
+import { LOCATION2, LOCATION_ADDRESS } from "../../const"
 import { BRIDE_INFO, GROOM_INFO } from "../../const"
 import { STATIC_ONLY } from "../../env"
 import { Button } from "../button"
@@ -77,7 +77,7 @@ export const Information2 = () => {
   return (
     <>
       <div className="info-card">
-        <div className="label">마음 전하실 곳</div>
+        <div className="label">마음 전하실 곳 💌</div>
         <div className="content">
           전해주시는 진심은 소중하게 간직하여
           <br />
@@ -138,7 +138,7 @@ export const Information2 = () => {
             })
           }}
         >
-          신랑측
+          신랑측 🤵🏻‍♂️
         </Button>
         <div className="break" />
         <Button
@@ -191,7 +191,7 @@ export const Information2 = () => {
             })
           }}
         >
-          신부측
+          신부측 👰🏻‍♀️
         </Button>
       </div>
     </>
@@ -204,7 +204,7 @@ export const Location = () => {
       <LazyDiv className="card location">
         <h2 className="english">Location</h2>
         <div className="addr">
-          {LOCATION}
+          {LOCATION2}
           <div className="detail">{LOCATION_ADDRESS}</div>
         </div>
         <Map />

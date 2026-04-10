@@ -35,7 +35,7 @@ export const Invitation = () => {
       </div>
       <div className="lyric">
         {language === "ko"
-          ? "분명한 건 지금보다 환하게 빛날거야"
+          ? "분명한 건 지금보다 환하게 빛날거야 ✨"
           : "One thing is certain, it will shine brighter than now."}
       </div>
       <div className="space">

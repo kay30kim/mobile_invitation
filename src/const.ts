@@ -18,7 +18,8 @@ export const WEDDING_DATE_FORMAT = `YYYY년 MMMM D일 dddd A h시${WEDDING_DATE.
 // 예: 예식일 8월 -> 8월 15일 광복절
 export const HOLIDAYS = [15]
 
-export const LOCATION = "서울 강남 엘리에나 호텔"
+export const LOCATION = "엘리에나 호텔 2층 컨벤션홀 💍"
+export const LOCATION2 = "🏩 강남 엘리에나 호텔 🏩"
 export const LOCATION_ADDRESS = "서울 강남구 논현로 645 엘리에나호텔\n2층 컨벤션홀"
 
 // 카카오톡 공유 시 위치 정보로 사용할 주소.
@@ -75,16 +76,16 @@ export const TRANSLATIONS = {
     locationText: "서울 강남 엘리에나 호텔 2층 컨벤션홀",
     infoTitle: "교통 안내",
     subway: "지하철 이용시",
-    bus: "버스 이용시",
+    bus: "🚌 버스 이용시",
     line7:"7호선",
     line9:"9호선",
 
-    donation: "마음 전하실 곳",
-    groomAccount: "신랑측",
-    brideAccount: "신부측",
+    donation: "마음 전하실 곳 💌",
+    groomAccount: "신랑측 🤵🏻‍♂️",
+    brideAccount: "신부측 👰🏻‍♀️",
     copy: "복사하기",
     close: "닫기",
-    car: "자가용 이용시",
+    car: "🚗 자가용 이용시",
 
     station1: "학동역",
     station2: "언주역",
@@ -107,8 +108,8 @@ export const TRANSLATIONS = {
     groomAccountTitle: "신랑측 계좌번호",
     brideAccountTitle: "신부측 계좌번호",
 
-    groomAccountButton: "신랑측",
-    brideAccountButton: "신부측",
+    groomAccountButton: "신랑측 🤵🏻‍♂️",
+    brideAccountButton: "신부측 👰🏻‍♀️",
 
     copied: "복사되었습니다.",
     copyFail: "복사에 실패했습니다.",
