@@ -13,6 +13,24 @@
 }
 
 @font-face {
+  font-family: "Hahmlet";
+  src: url("./Hahmlet-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Hahmlet";
+  src: url("./Hahmlet-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Hahmlet";
+  src: url("./Hahmlet-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
     font-family: "UhBee Se_hyun";
     src: url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.eot");
     src: url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.eot?#iefix")format("embedded-opentype"),
@@ -22,14 +40,14 @@
     url("https://db.onlinewebfonts.com/t/b70e7c042deeed25b01dc2c293227b3a.svg#UhBee Se_hyun")format("svg");
 }
 
-/* @font-face {
+@font-face {
   font-family: "Pretendard";
-  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  src: url("./Pretendard-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Pretendard";
-  src: url("/fonts/Pretendard-Medium.woff2") format("woff2");
+  src: url("./Pretendard-Medium.woff2") format("woff2");
   font-weight: 500;
-} */
+}
