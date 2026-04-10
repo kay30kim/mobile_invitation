@@ -398,7 +398,7 @@ export const Gallery = () => {
           })
         }
       >
-        사진 전체보기
+        사진 전체보기 ~❥
       </Button>
     </LazyDiv>
   )

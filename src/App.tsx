@@ -12,10 +12,23 @@ import { LazyDiv } from "./component/lazyDiv"
 import { ShareButton } from "./component/shareButton"
 import { STATIC_ONLY } from "./env"
 import { LanguageProvider } from "./context/LanguageContext"
+import { useRef, useEffect } from "react"
 
 function App() {
+  const audioRef = useRef<HTMLAudioElement>(null)
+
+  useEffect(() => {
+    const play = () => {
+      audioRef.current?.play()
+      document.removeEventListener('click', play)
+    }
+    document.addEventListener('click', play)
+  }, [])
   return (
     <LanguageProvider>
+      <audio ref={audioRef} loop>
+        <source src="./beautiful.mp3" type="audio/mpeg" />
+      </audio>
       <div className="background">
         <BGEffect />
         <div className="card-view">
