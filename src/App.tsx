@@ -27,7 +27,7 @@ function App() {
   return (
     <LanguageProvider>
       <audio ref={audioRef} loop>
-        <source src="./beautiful.mp3" type="audio/mpeg" />
+        <source src="./wedding_song.mp3" type="audio/mpeg" />
       </audio>
       <div className="background">
         <BGEffect />
