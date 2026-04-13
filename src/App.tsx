@@ -18,11 +18,17 @@ function App() {
   const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
-    const play = () => {
-      audioRef.current?.play()
-      document.removeEventListener('click', play)
-    }
-    document.addEventListener('click', play)
+    // 페이지 로드 후 바로 재생 시도
+    setTimeout(() => {
+      audioRef.current?.play().catch(() => {
+        // 자동 재생 실패 시 클릭으로 재생
+        const play = () => {
+          audioRef.current?.play()
+          document.removeEventListener('click', play)
+        }
+        document.addEventListener('click', play)
+      })
+    }, 500)
   }, [])
   return (
     <LanguageProvider>
